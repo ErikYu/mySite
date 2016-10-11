@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>绝热计算</title>
+		<link rel="stylesheet" type="text/css" href="css/cssfile.css"/>
+		<script type="text/javascript" src="js/jsfile.js"></script>
+	</head>
+	<body>
+		<div class="headBar">苟利国家生死以，</div>
+		<div class="guideBar">
+			<ul>
+				<li><a href="">绝热计算</a></li>
+				<li><a href="">绝热计算</a></li>
+				<li><a href="">绝热计算</a></li>
+				<li><a href="">绝热计算</a></li>
+				<li><a href="">绝热计算</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			允许散热量计算
+		<fieldset class="box">
+			<legend>Input</legend>
+			<div id="inputZone">
+			管道外径：
+			<input type="text" id="pipeOd" value="25"/> mm
+			<br />
+			介质温度：
+			<input type="text" id="tempFluid" value="114"/> C
+			<br />
+			环境温度：
+			<input type="text" id="tempSrrd" value="0"/> C
+			<br />
+			室外风速：
+			<input type="text" id="vWind" value="0.1"/> m/s
+			<br />
+			保温厚度：
+			<input type="text" id="dIso" value="60"/> mm
+			<br />
+			导热系数：
+			<input type="text" id="lambda0" value="0.044"/> W/(m*K)
+			<br />
+			修正系数A :<input type="text" id="A" value="0.00018" /><br />
+			修正系数B :<input type="text" id="B" value="70"/>
+			</div>
+			<div id="buttonZone">
+			<input type="button" value="CALC" onclick="ock1()" id="btn1"/>
+			</div>
+		</fieldset>
+		<fieldset class="box">
+			<legend>Output</legend>
+			实际导热系数：
+			<input id="lambda" value="" readonly=""> W/(m*K)<br />
+			对流换热系数：
+			<input id="hout" value="" readonly=""/> W/(m2*K)<br />
+			单位长度散热：
+			<input id="qLength" value="" readonly=""> W/m<br />
+			单位面积散热：
+			<input id="qAera" value="" readonly="" /> W/m2<br />
+			绝热外表温度：
+			<input id="tempIso" value="" readonly=""/> C<br />
+		</fieldset>
+		</div>
+		<div class="bottomBar">powered by yyz!岂因祸福避趋之</div>
+	</body>
+</html>
