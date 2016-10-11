@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/selfbs.css"/>
+		<script src="js/jquery-3.1.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jsfile.js"></script>
+	</head>
+	<body>
+		//导航栏
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	    	<div class="container">
+	    		<div class="navbar-header">
+	    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	    				<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">在这停顿！</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#contact">Calculation</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="#contact">Gallery</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+		<div class="headZone">
+			<div id="logoZone"><a href=""><img src="img/logo.png" id="logo"></a></div>
+			<div id="name">
+				<h1>我爱吃南瓜</h1>
+				<h3>喵喵</h3>
+			</div>
+		</div>
+		<div class="content">
+			<div class="articleContent">
+			<h2>基本概念</h2>
+			<p>1. 词典包含两个部分：键(key) 和 值(value)</p>
+			<p>2. 词典的元素没有顺序，无下标引用，通过键引用。</p>
+			<div class="codeZone">
+				<p><code>dic = {'tom':11,'mac':13,'plc':15}</code></p>
+				<p><code>print 'the type of dic is ',type(dic)</code></p>
+				<p><code>print dic</code></p>
+				<p><code>print 'tom scores ',dic['tom']</code></p>
+			</div>
+			<p>3. 构建一个空的词典，并添加一个新元素。添加新元素的方法为引用一个新的键并赋值。</p>
+			<div class="codeZone">
+				<p><code>eptd = {}</code></p>
+				<p><code>print eptd</code></p>
+				<p><code>eptd['lilei'] = 99</code></p>
+				<p><code>print eptd</code></p>
+			</div>
+			<h2>词典元素的循环调用</h2>
+			<p>1. 调用方法</p>
+	-----
+	dic = {'tom':11,'mac':13,'plc':15}
+	
+	for items in dic:
+	    print items,'scores',dic[items]
+	-----
+	注：dict中元素无顺序，code中items可任意替换掉
+	注2：dict中每个键被提取出来，赋给items变量
+词典的常用方法
+	1. 如下
+	-----
+	dic = {'tom':11,'mac':13,'plc':15}
+	
+	print dic.keys()
+	print dic.values()
+	print dic.items()
+	
+	del dic['tom']
+	print dic
+	
+	dic.clear()
+	print dic.keys()
+	print dic.values()
+	print dic.items()
+	-----
+总结
+	1. 键对应
+无序
+		</div>
+		</div>
+	</body>
+</html>
