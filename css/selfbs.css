@@ -37,18 +37,9 @@
 #gallery{
 	background-color: #CE8483;
 }
-.huigun{
-	float: left;
-	clear: both ;
 }
 .hoverShow{
 	display: none;
-}
-/*.hoverShowBlog{
-	display: none;
-}
-.hoverShowGallery{
-	display: none;*/
 }
 .hoverImg{
 	width: 100%;
@@ -157,27 +148,31 @@ hr{
 
 
 /*gallrtyTest*/
-.fuji{
-	position: relative;
-	height: 200px;
-	width: 320px;
+.example-image{
+	width: 300px;
 }
-.imgs{
-	width: 320px;
-	height: 200px;
+.example-image-link{
+	display:inline-block;
+	padding:4px;
+	margin:0 0.5rem 1rem 0.5rem;
+	background-color:#EEEEEE;
+	line-height:0;
+	-webkit-transition:background-color 0.1s ease-out;
+	-moz-transition:background-color 0.1s ease-out;
+	-o-transition:background-color 0.1s ease-out;
+	transition:background-color 0.1s ease-out;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	-ms-border-radius:6px;
+	-o-border-radius:6px;
+	border-radius:6px
 }
-.fugai{
-	width: 320px;
-	height: 200px;
-	opacity: 0.9999;
+.example-image-link:hover{
+	background-color:#4ae;
 }
-.fugai:hover{
-	opacity: 0.2;
-}
-.dcpImg{
-	background-color: #269ABC;
-	width: 320px;
-	position: absolute;
-	bottom: 0px;
-	display: none;
+.galleryZone{
+	width: 1060px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
 }
