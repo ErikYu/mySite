@@ -1,9 +1,9 @@
 .headZone{
 	background-color: orange;
 	height: 150px;
-	font-family:"楷体";
+	font-family: "microsoft yahei";
 	font-size: 40px;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 #logo{
@@ -19,6 +19,7 @@
 }
 
 .branchBox{
+	font-family: "microsoft yahei";
 	width: 33.33%;
 	height: 500px;
 	float: left;
@@ -40,17 +41,14 @@
 	float: left;
 	clear: both ;
 }
-.hoverShowCalc{
+.hoverShow{
 	display: none;
-	/*background-color: #8A6D3B;*/
-	/*bottom: 0px;*/
-	/*position: absolute;*/
 }
-.hoverShowBlog{
+/*.hoverShowBlog{
 	display: none;
 }
 .hoverShowGallery{
-	display: none;
+	display: none;*/
 }
 .hoverImg{
 	width: 100%;
@@ -89,7 +87,7 @@
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 10px;
-    font-family: '楷体';
+    font-family: '"microsoft yahei";
 
 }
 body{
@@ -155,4 +153,31 @@ hr{
 }
 .articleContent{
 	padding-left: 2em;
+}
+
+
+/*gallrtyTest*/
+.fuji{
+	position: relative;
+	height: 200px;
+	width: 320px;
+}
+.imgs{
+	width: 320px;
+	height: 200px;
+}
+.fugai{
+	width: 320px;
+	height: 200px;
+	opacity: 0.9999;
+}
+.fugai:hover{
+	opacity: 0.2;
+}
+.dcpImg{
+	background-color: #269ABC;
+	width: 320px;
+	position: absolute;
+	bottom: 0px;
+	display: none;
 }

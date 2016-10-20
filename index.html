@@ -11,7 +11,7 @@
 		<script type="text/javascript" src="js/jsfile.js"></script>
 	</head>
 	<body>
-		//导航栏
+		<!--//导航栏-->
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	    	<div class="container">
 	    		<div class="navbar-header">
@@ -43,11 +43,11 @@
 			</div>
 		</div>
 		<div class="branchBox" id="calc">
-			<div id="calcFont" onclick="window.open('http://www.baidu.com','_self')">
+			<div id="calcFont" class="blurFont" onclick="window.open('http://www.baidu.com','_self')">
 				<h1>计算</h1>
 				<h3>苟利国家生死以</h3>
 			</div>
-			<div class="hoverShowCalc">
+			<div class="hoverShow">
 				<div>
 					<h3>我一个上海市委书记</h3>
 					<h3>怎么就来北京</h3>
@@ -63,22 +63,22 @@
 			</div>
 		</div>
 		<div class="branchBox" id="blog" onclick="window.open('blog.html','_self')">
-			<div id="blogFont">
+			<div id="blogFont" class="blurFont">
 			<h1>博客</h1>
 			<h3>岂因祸福避趋之</h3>
 			</div>
-			<div class="hoverShowBlog">
+			<div class="hoverShow">
 				<h3>我这十年</h3>
 				<h3>做了三件微不足道的小事</h3>
 				<h3>很惭愧，谢谢大家</h3>
 			</div>
 		</div>
-		<div class="branchBox" id="gallery">
-			<div id="galleryFont">
+		<div class="branchBox" id="gallery" onclick="window.open('galleryTest.html','_self')">
+			<div id="galleryFont" class="blurFont">
 			<h1>相册</h1>
 			<h3>忽如一夜春风来</h3>
 			</div>
-			<div class="hoverShowGallery">
+			<div class="hoverShow">
 				<h3>确立了社会主义市场经济</h3>
 				<h3>把邓小平理论写进党章</h3>
 				<h3>三个代表</h3>
@@ -95,5 +95,21 @@
 			<h4>感谢github提供的ph-pages服务</h4>
 			<h5>powered by ErikYu</h5>
 		</div>
+		<script>
+			$(document).ready(function(){
+				$(".branchBox").hover(function(){
+					$(this).children(".hoverShow").fadeToggle()
+					$(this).children(".blurFont").css(
+						"filter", "blur(2px)"
+					)
+				})
+				$(".branchBox").mouseleave(function(){
+					$(this).children(".blurFont").css(
+						"filter", "none"
+					)
+				})
+				
+			})
+		</script>
 	</body>
 </html>

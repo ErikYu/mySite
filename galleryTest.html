@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/selfbs.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="fuji" style="position: relative;">
+			<div class="ziji" style="position: absolute;">
+				<img class="imgs" src="img/opacity.png" />
+			</div>
+			<img class="fugai" src="img/anna1.jpg" />
+			<div class="dcpImg">here is Ana</div>
+		</div>
+		
+		<div class="fuji" style="position: relative;">
+			<div class="ziji" style="position: absolute;">
+				<img class="imgs" src="img/opacity.png" />
+			</div>
+			<img class="fugai" src="img/anna1.jpg" />
+			<div class="dcpImg">here is Ana</div>
+		</div>
+		
+	<script src="js/jquery-3.1.0.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".fuji").hover(function(){
+				$(this).children(".dcpImg").slideToggle()
+			})
+		})
+	</script>
+	</body>
+</html>

@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jsfile.js"></script>
 	</head>
 	<body>
-		//导航栏
+		<!--导航栏-->
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	    	<div class="container">
 	    		<div class="navbar-header">
@@ -61,35 +61,47 @@
 			</div>
 			<h2>词典元素的循环调用</h2>
 			<p>1. 调用方法</p>
-	-----
-	dic = {'tom':11,'mac':13,'plc':15}
-	
-	for items in dic:
-	    print items,'scores',dic[items]
-	-----
-	注：dict中元素无顺序，code中items可任意替换掉
-	注2：dict中每个键被提取出来，赋给items变量
-词典的常用方法
-	1. 如下
-	-----
-	dic = {'tom':11,'mac':13,'plc':15}
-	
-	print dic.keys()
-	print dic.values()
-	print dic.items()
-	
-	del dic['tom']
-	print dic
-	
-	dic.clear()
-	print dic.keys()
-	print dic.values()
-	print dic.items()
-	-----
-总结
-	1. 键对应
-无序
+			<div class="codeZone">
+				<pre>
+dic = {'tom':11,'mac':13,'plc':15}
+for items in dic:
+    print items,'scores',dic[items]</pre>
+			</div>
+			<p>注：dict中元素无顺序，code中items可任意替换掉;注2：dict中每个键被提取出来，赋给items变量</p>
+			<h2>词典的常用方法</h2>
+			<p>1. 如下</p>
+			<div class="codeZone">
+				<pre>
+dic = {'tom':11,'mac':13,'plc':15}
+
+print dic.keys()
+print dic.values()
+print dic.items()
+
+del dic['tom']
+print dic
+
+dic.clear()
+print dic.keys()
+print dic.values()
+print dic.items()</pre>
+			</div>
+			<h2>总结</h2>
+			<p>1. 键对应</p>
+			<p>2. 无序</p>
 		</div>
+		</div>
+		
+		<div class="footer">
+			<div class="connect">
+				<ul>
+					<li><a href="https://github.com/ErikYu/"><img src="img/github.gif"/></a></li>
+					<li><a href=""><img src="img/email.gif"/></a></li>
+					<li><a href=""><img src="img/weibo.gif"/></a></li>
+				</ul>
+			</div>
+			<h4>感谢github提供的ph-pages服务</h4>
+			<h5>powered by ErikYu</h5>
 		</div>
 	</body>
 </html>
