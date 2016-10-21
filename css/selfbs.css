@@ -176,3 +176,8 @@ hr{
 	margin-left: auto;
 	margin-right: auto;
 }
+.timeLine{
+	position: fixed;
+	left: -10px;
+	top: 50%;
+}

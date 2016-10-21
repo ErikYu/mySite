@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>皮卡皮卡丘！</title>
+		<style>
+			body{
+				margin: 0px;
+			}
+			ul{
+				list-style: none;
+				margin: 0px;
+				
+			}
+			li{
+				float: left;
+			}
+			a{
+				text-decoration: none;
+			}
+			.headZone{
+				background: #333;
+				height: 100%;
+				width: 100%;
+			}
+			.heaImg{
+				background-image: url(img/img3.png);
+				background-position: center 0px;
+				height: 500px;
+				width: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.headZone p,input,ul{
+				position: absolute;
+			}
+			.headZone p{
+				font-size: 30px;
+				font-weight: 100;
+				font-family: "microsoft yahei";
+				color: #EEEEEE;
+				white-space:nowrap;
+				left: 39%;
+				top: 100px;
+			}
+			.headZone input{
+				top: 200px;
+				opacity: 0.4;
+				width: 350px;
+				height: 30px;
+				left: 36%;
+			}
+			.headZone ul{
+				top: 250px;
+				color: #FFFFFF;
+				font-size: 16px;
+				left: 35%;
+				white-space:nowrap;
+			}
+			.headZone li{
+				margin: 0 5px 0 5px;
+				
+			}
+			/*content*/
+			.content{
+				width: 90%;
+				padding-top: 30px;
+			}
+			hr{
+				float: left;
+				width: 43%;
+			}
+			.content{
+				margin: 0 auto;
+				min-width: 910px;
+			}
+			.content>div{
+				float: left;
+			}
+			.hrIntro{
+				margin: 20px auto 5px;
+				width: 100%;
+			}
+			.intro{
+				float: left;
+				margin: 0px;
+				width: 13%;
+				min-width: 100px;
+				text-align: center;
+				color: #9A9A9A;
+			}
+			.cata{
+				margin-top: 10px;
+			}
+			.imgCata{
+				width: 13.2%;
+				float: left;
+				margin: 0 0.5%;
+				
+			}
+			.imgCata img{
+				width: 100%;
+				/*filter: blur(1px);*/
+				border-radius: 6px;
+			}
+			.imgCata img:hover{
+				filter: blur(1px);
+			}
+			
+			.recommandZone{
+				width: 100%;
+				margin-top: 10px;
+			}
+			.recommandBar{
+				float: left;
+				width: 25%;
+				height: 100%;
+			}
+			.recommandBar img{
+				width: 100%;
+				display: block;
+				/*padding: 2px;*/
+			}
+			.recomandArt{
+				width: 100%;
+				float: left;
+				background-color: #F5F5F5;
+				margin-bottom: 0px;
+			}
+			.recomandArt1{
+				width: 50%;
+				float: left;
+				background-color: #F5F5F5;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="headZone">
+			<div class="heaImg"></div>
+			<p>小小皮卡，真真烦恼</p>
+			<input value="请输入你喜欢的关键词" id="search" />
+			<ul>
+				<li>热门搜索：</li>
+				<li>守望先锋</li>
+				<li>皮卡丘</li>
+				<li>金条</li>
+				<li>黑条</li>
+			</ul>
+		</div>
+		<!--内容区域-->
+		<div class="content">
+			<div class="hrIntro">
+				<hr />
+				<p class="intro">大家正在关注</p>
+				<hr />
+			</div>
+			<div class="cata">
+				<a href="" class="imgCata">
+					<img src="img/IMG_2315.JPG" />
+				</a>
+				<a href="" class="imgCata">
+					<img src="img/IMG_2592.JPG" />
+				</a>
+				<a href="" class="imgCata">
+					<img src="img/IMG_2194.JPG" />
+				</a>
+				<a href="" class="imgCata">
+					<img src="img/IMG_2240.JPG" />
+				</a>
+				<a href="" class="imgCata">
+					<img src="img/IMG_2315.JPG" />
+				</a>
+				<a href="" class="imgCata">
+					<img src="img/IMG_2592.JPG" />
+				</a>
+				<a href="" class="imgCata">
+					<img src="img/IMG_2194.JPG" />
+				</a>
+			</div>
+			<div class="hrIntro">
+				<hr />
+				<p class="intro">为您推荐</p>
+				<hr />
+			</div>
+			<div class="recommandZone">
+				<div class="recommandBar">
+					<a href="">
+						<img src="img/fox1.jpg" />
+					</a>
+				</div>
+				<div class="recommandBar">
+					<div class="recomandArt1"><img src="img/cat1.JPG" /></div>
+					<div class="recomandArt1"><img src="img/cat2.JPG" /></div>
+					<div class="recomandArt1"><img src="img/cat3.JPG" /></div>
+					<div class="recomandArt1"><img src="img/cat4.JPG" /></div>
+				</div>
+				<div class="recommandBar">
+					<a href="">
+						<img src="img/fox2.jpg" />
+					</a>
+				</div>
+				<div class="recommandBar">
+						<img src="img/fox3.jpg">
+						<img src="img/fox4.jpg">
+				</div>
+			</div>
+			
+			<div class="recommandZone">
+				<div class="recommandBar">
+					<a href="">
+						<img src="img/fox1.jpg" />
+					</a>
+				</div>
+				<div class="recommandBar">
+					<div class="recomandArt1"><img src="img/cat1.JPG" /></div>
+					<div class="recomandArt1"><img src="img/cat2.JPG" /></div>
+					<div class="recomandArt1"><img src="img/cat3.JPG" /></div>
+					<div class="recomandArt1"><img src="img/cat4.JPG" /></div>
+				</div>
+				<div class="recommandBar">
+					<a href="">
+						<img src="img/fox2.jpg" />
+					</a>
+				</div>
+				<div class="recommandBar">
+						<img src="img/fox3.jpg">
+						<img src="img/fox4.jpg">
+				</div>
+			</div>
+		</div>
+		
+		<!--脚本-->
+		<script src="js/jquery-3.1.0.js"></script>
+		<script type="text/javascript">
+		
+			//试图写出获取高度并关联，未完！
+//			var wenbenkuang = document.getElementsByClassName("recomandArt");
+//			var l = wenbenkuang.length;
+//			var act = document.getElementsByClassName("recommandBar")[0].style.height;
+//			for(i=0; i<l; i++){
+//				wenbenkuang[i].style.height = act;
+//			}
+//			doSomeThing("recomandArt");
+//			doSomeThing1("recomandArt1");
+//			doSomeThing1("recomandArt2");
+//			doSomeThing1("recomandArt3");
+//			doSomeThing1("recomandArt4");
+//			function doSomeThing(myClassName){
+//				var aDiv=document.getElementsByTagName('div');
+//				for(var i=0;i<aDiv.length;i++){
+//					if(aDiv[i].className==myClassName){
+//					aDiv[i].style.height=aDiv[i].offsetWidth/2+'px';
+//					}
+//				}
+//			}
+//			function doSomeThing1(myClassName){
+//				var aDiv=document.getElementsByTagName('div');
+//				for(var i=0;i<aDiv.length;i++){
+//					if(aDiv[i].className==myClassName){
+//					aDiv[i].style.height=aDiv[i].offsetWidth+'px';
+//					}
+//				}
+//			}
+		</script>
+		<script>
+			$(function(){
+				$("#search").focus(function(){
+					$("#search").val("")
+				});
+			})
+		</script>
+	</body>
+</html>
