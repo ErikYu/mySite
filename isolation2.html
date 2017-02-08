@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Input</legend>
+            <div class="form-group form-inline" id="pipeInfo">  <!--此时的form-group表现为.row-->
+                <label for="pipeOD" class="col-sm-2 control-label">Pipe Diam</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Input pipe diameter" id="pipeOD" type="text" v-model="pipeOd">
+                    <select class="form-control" v-model="lengthUnit" v-on:blur="lengthChange" v-on:mouseover="getUnit">
+                        <option value="mm">mm</option>
+                        <option value="inch">inch</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="innerT" class="col-sm-2 control-label">Inner Temp</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Input fluid temperature" id="innerT" type="text">
+                    <select class="form-control">
+                        <option>°C</option>
+                        <option>K</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="surroT" class="col-sm-2 control-label">Envir Temp</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Surrounding temperature" id="surroT" type="text">
+                    <select class="form-control">
+                        <option>°C</option>
+                        <option>K</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="windV" class="col-sm-2 control-label">Wind Velocity</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Wind Velocity" id="windV" type="text">
+                    <select class="form-control">
+                        <option>m/s</option>
+                        <option>km/h</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="isoTd" class="col-sm-2 control-label">Isolation Thick</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Isolation Thick" id="isoTd" type="text">
+                    <select class="form-control">
+                        <option>mm</option>
+                        <option>inch</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="condCoef" class="col-sm-2 control-label">Conduction Coef</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Conduction coefficient" id="condCoef" type="text">
+                    <select class="form-control">
+                        <option>W/(m*K)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="coefA" class="col-sm-2 control-label">Coef. A</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Coef. A" id="coefA" type="text">
+                </div>
+            </div>
+            <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+                <label for="coefB" class="col-sm-2 control-label">Coef. B</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Coef. B" id="coefB" type="text">
+                </div>
+            </div>
+            <div class="form group">
+                <div class="col-sm-offset-2">
+                    <button class="btn btn-default">Reset</button>
+                    <button class="btn btn-default">Calc</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <form class="form-horizontal">
+        <legend>Output</legend>
+        <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+            <label for="condCoefTrue" class="col-sm-2 control-label">Actual cond Coef</label>
+            <div class="col-sm-10">
+                <input class="form-control" placeholder="Actual cond Coef" id="condCoefTrue" type="text" readonly>
+                <select class="form-control">
+                    <option>W/(m*K)</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+            <label for="convCoef" class="col-sm-2 control-label">Convection Coef</label>
+            <div class="col-sm-10">
+                <input class="form-control" placeholder="Convection Coef" id="convCoef" type="text" readonly>
+                <select class="form-control">
+                    <option>W/(m2*K)</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+            <label for="heatLossLength" class="col-sm-2 control-label">Heat Loss Length</label>
+            <div class="col-sm-10">
+                <input class="form-control" placeholder="Heat Loss Length" id="heatLossLength" type="text" readonly>
+                <select class="form-control">
+                    <option>W/m</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+            <label for="heatLossArea" class="col-sm-2 control-label">Heat Loss Area</label>
+            <div class="col-sm-10">
+                <input class="form-control" placeholder="Heat Loss Length" id="heatLossArea" type="text" readonly>
+                <select class="form-control">
+                    <option>W/m2</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-inline">  <!--此时的form-group表现为.row-->
+            <label for="outerT" class="col-sm-2 control-label">Outer Surface Temp</label>
+            <div class="col-sm-10">
+                <input class="form-control" placeholder="Outer Surface Temp" id="outerT" type="text" readonly>
+                <select class="form-control">
+                    <option>°C</option>
+                    <option>K</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app1=new Vue({
+            el: "#pipeInfo",
+            data: {
+                pipeOd: 60,
+                lengthUnit: "mm"
+            },
+            computed:{
+                oldUnit:function () {
+                    console.log(this.lengthUnit);
+                    return this.lengthUnit;
+            },
+            methods:{
+                lengthChange: function (val) {
+                    if(this.lengthUnit=="mm"&&){
+                        console.log("a")
+                    }
+                }
+            }
+        })
+    </script>
+</div>
+</body>
+</html>
