@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iso3组件化</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container" id="isoCalc">
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Input</legend>
+            <div class="form-group form-inline" id="pipeInfo">  <!--此时的form-group表现为.row-->
+                <label for="pipeOD" class="col-sm-2 control-label">Pipe Diam</label>
+                <length-input v-bind:value="pipeOd" v-bind:unit="lengthUnit"></length-input>
+            </div>
+        </fieldset>
+    </form>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="js/isolation3.js"></script>
+</div>
+</body>
+</html>
